@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
   flexContainer: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around'
+    justifyContent: 'center'
   }
 }));
 
@@ -18,11 +18,13 @@ export default function Box(props) {
     <div>
       <div className={classes.flexContainer}>
         {props.arr.map((num) =>
+
           <Paper
             id={num === props.number ? 'largeBox' : 'smallBox'}
             elevation={6}
             key={num}>
           </Paper>
+
         )}
       </div>
     </div>
