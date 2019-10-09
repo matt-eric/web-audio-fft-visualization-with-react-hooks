@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Box from "./Box"
 
@@ -8,7 +7,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      arr: [1,2,3,4],
+      arr: [
+        1,2,3,4,
+        5,6,7,8,
+        9,10,11,12,
+        13,14,15,16
+          ],
       number: 1
     }
   }
@@ -25,7 +29,7 @@ class App extends React.Component {
 
   counter(){
     let num = this.state.number + 1
-    if (num === 5){
+    if (num === 16){
       num = 1
     }
       this.setState({
