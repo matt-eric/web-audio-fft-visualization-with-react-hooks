@@ -28,13 +28,15 @@
   height: 50px;
   background-color: #2962ff;
   transition: all 1s;
+
 }
 
 #largeBox {
   padding: 10px;
   margin: 10px;
-  width: 100px;
+  width: 50px;
   height: 100px;
   background-color: #00e676;
   transition: all 1s;
+  drop-shadow: 0 0 25px white;
 }
