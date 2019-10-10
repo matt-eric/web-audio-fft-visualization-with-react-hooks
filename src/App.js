@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   counter(){
-    let height = this.getRandomArbitrary(55, 300)
+    let height = this.getRandomArbitrary(55, 600)
     let num = this.state.number + 1
     if (num === 9){
       num = 1
