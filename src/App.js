@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Box from "./Box"
+import VisualDemo from "./VisualDemo"
 
 class App extends React.Component {
 
@@ -42,6 +43,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <VisualDemo/>
         <Box
           arr={this.state.arr}
           number={this.state.number}
