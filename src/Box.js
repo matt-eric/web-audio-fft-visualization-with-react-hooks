@@ -2,12 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import './App.scss';
 
 const useStyles = makeStyles(theme => ({
   flexContainer: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center'
+    justifyContent: 'center',
   }
 }));
 
@@ -21,6 +22,7 @@ export default function Box(props) {
 
           <Paper
             id={num === props.number ? 'largeBox' : 'smallBox'}
+            style={{height: num === props.number ? props.heightNum : '50px'}}
             elevation={6}
             key={num}>
           </Paper>
