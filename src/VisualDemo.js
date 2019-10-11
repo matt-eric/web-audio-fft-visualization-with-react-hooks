@@ -1,31 +1,26 @@
 import React, { Component } from 'react';
 import P5Wrapper from 'react-p5-wrapper';
-import sketch from './Spectrum';
+import Spectrum from './Spectrum';
 import './App.scss';
 
 class VisualDemo extends Component {
   constructor(){
     super();
-    this.state = {color:[Math.random()*255, Math.random()*255, Math.random()*255]};
-    this.randomColor = this.randomColor.bind(this);
+    this.state = {
+      playing: false
+    };
   }
 
-  randomColor(){
-    this.setState({color:[Math.random()*255, Math.random()*255, Math.random()*255]}
-    )
+  componentDidMount(){
+    debugger
   }
 
   render() {
     return (
       <div>
-        <button
-          onClick={this.randomColor}
-        >
-          Random Color
-        </button>
         <P5Wrapper
-          sketch={sketch}
-          color={this.state.color}>
+          sketch={Spectrum}
+          playing={this.state.playing}>
         </P5Wrapper>
       </div>
     );
