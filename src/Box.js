@@ -14,7 +14,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function Box(props) {
   const classes = useStyles();
-
   return (
     <div>
       <div className={classes.flexContainer}>
@@ -22,12 +21,12 @@ export default function Box(props) {
 
           <Paper
             id={num === props.number ? 'largeBox' : 'smallBox'}
-            style={{height: num === props.number ? props.heightNum : '50px'}}
+            style={{height: props.low}}
             elevation={6}
             key={num}>
           </Paper>
-
         )}
+        {props.low}
       </div>
     </div>
   );

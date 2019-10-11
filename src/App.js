@@ -24,6 +24,10 @@ class App extends React.Component {
     , 1000);
   }
 
+  componentWillReceiveProps(){
+    debugger
+  }
+
   counter(){
     let height = this.getRandomArbitrary(55, 600)
     let num = this.state.number + 1
@@ -43,8 +47,8 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <VisualDemo/>
         <Box
+          low={this.props.low}
           arr={this.state.arr}
           number={this.state.number}
           heightNum={this.state.heightNum}
