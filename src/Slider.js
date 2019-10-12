@@ -19,10 +19,6 @@ export default function MySlider(props) {
         aria-labelledby="input-slider"
       />
 
-      <Input
-        value={props.value}
-      />
-
     </div>
   );
 }

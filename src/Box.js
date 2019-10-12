@@ -18,15 +18,13 @@ export default function Box(props) {
     <div>
       <div className={classes.flexContainer}>
         {props.arr.map((num) =>
-
           <Paper
-            id={num === props.number ? 'largeBox' : 'smallBox'}
-            style={{height: props.low}}
-            elevation={6}
+            id={'largeBox'}
+            style={{height: props.amplitudeArr[num]}}
+            elevation={1}
             key={num}>
           </Paper>
         )}
-        {props.low}
       </div>
     </div>
   );
