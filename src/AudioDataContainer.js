@@ -53,7 +53,7 @@ class AudioDataContainer extends React.Component {
   runCounter = () => {
     setInterval(() =>
       this.getFrequencyData(0)
-    , 50);
+    , 1);
   }
 
   render(){

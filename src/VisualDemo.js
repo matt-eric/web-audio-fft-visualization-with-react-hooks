@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import App from './App';
 import Box from './Box';
-import Slider from './Slider';
 import Paper from '@material-ui/core/Paper';
 import './App.scss';
 

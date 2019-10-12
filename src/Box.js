@@ -20,9 +20,10 @@ export default function Box(props) {
         {props.arr.map((num) =>
           <Paper
             id={'largeBox'}
-            style={{height: props.amplitudeArr[num]}}
+            style={{height: Math.pow(props.amplitudeArr[num], 1.12)}}
             elevation={1}
-            key={num}>
+            key={num}
+            >
           </Paper>
         )}
       </div>
