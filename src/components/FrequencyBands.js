@@ -23,7 +23,7 @@ export default function FrequencyBands(props) {
               height: Math.pow(props.amplitudeArr[num], 1.025),
               backgroundColor: `rgb(0, ${props.amplitudeArr[num]}, 206)`
             }}
-            elevation={1}
+            elevation={4}
             key={num}
             >
           </Paper>
