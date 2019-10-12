@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import AudioDataContainer from './AudioDataContainer';
+import './stylesheets/index.scss';
+import AudioDataContainer from './components/AudioDataContainer';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<AudioDataContainer />, document.getElementById('root'));

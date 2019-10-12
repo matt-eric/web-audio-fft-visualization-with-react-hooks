@@ -1,6 +1,6 @@
 import React from 'react';
 import VisualDemo from './VisualDemo';
-import soundFile from './GummyBearz.mp3'
+import soundFile from '../audio/GummyBearz.mp3'
 
 class AudioDataContainer extends React.Component {
 
@@ -10,7 +10,6 @@ class AudioDataContainer extends React.Component {
      audioData: {},
      frequencyBands: []
    };
-   this.low = 0
  }
 
   componentDidMount(){
@@ -23,22 +22,23 @@ class AudioDataContainer extends React.Component {
 
     AudioContext = window.AudioContext || window.webkitAudioContext;
     audioFile = new Audio();
+    audioFile.src = soundFile;
     audioContext = new AudioContext();
     source = audioContext.createMediaElementSource(audioFile);
-    source.connect(audioContext.destination);
     analyser = audioContext.createAnalyser();
-    source.connect(analyser);
     analyser.fftSize = 64
-    audioFile.src = soundFile;
+
+    source.connect(audioContext.destination);
+    source.connect(analyser);
+
     let bufferLength = analyser.frequencyBinCount;
-    audioFile.play();
     let dataArray = new Uint8Array(bufferLength);
 
-    this.setState({
-      audioData: analyser,
-      frequencyBands: dataArray
-    })
-
+    audioFile.play();
+      this.setState({
+        audioData: analyser,
+        frequencyBands: dataArray
+      })
   }
 
   getFrequencyData = (num) => {
@@ -61,12 +61,8 @@ class AudioDataContainer extends React.Component {
     return (
       <div>
         <VisualDemo
-          frequencyBands={this.state.frequencyBands}
           audioData={this.state.audioData}
-          getFrequencyData={this.runCounter}
-          num={this.low}
         />
-
       </div>
     );
 
