@@ -17,10 +17,13 @@ export default function Box(props) {
   return (
     <div>
       <div className={classes.flexContainer}>
-        {props.arr.map((num) =>
+        {props.arr.reverse().map((num) =>
           <Paper
             id={'largeBox'}
-            style={{height: Math.pow(props.amplitudeArr[num], 1.12)}}
+            style={{
+              height: Math.pow(props.amplitudeArr[num], 1.025),
+              backgroundColor: `rgb(0, ${props.amplitudeArr[num]}, 206)`
+            }}
             elevation={1}
             key={num}
             >
