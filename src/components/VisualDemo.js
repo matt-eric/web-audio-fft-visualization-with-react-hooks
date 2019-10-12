@@ -16,7 +16,7 @@ export default function VisualDemo(props) {
     function runCounter (){
       setInterval(() =>
         getFrequencyData(0)
-      , 1);
+      , 10);
     }
 
     const [value, setValue] = React.useState(0);
