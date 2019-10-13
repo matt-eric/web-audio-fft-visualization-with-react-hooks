@@ -1,5 +1,8 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+import EqualizerIcon from '@material-ui/icons/Equalizer';
 import { makeStyles } from '@material-ui/core/styles';
 import '../stylesheets/App.scss';
 
@@ -21,17 +24,9 @@ export default function VisualDemo(props) {
       setValue(newValue);
     };
 
-    function getFrequencyData(num){
-      const audioData = props.audioData
-      const bufferLength = audioData.frequencyBinCount;
-      const dataArray = new Uint8Array(bufferLength);
-      audioData.getByteFrequencyData(dataArray)
-      handleFrequencyChanges(dataArray)
-    }
-
     function runCounter (){
       setInterval(() =>
-        getFrequencyData(0)
+        props.getFrequencyData(0, handleFrequencyChanges)
       , 10);
     }
 
@@ -39,10 +34,18 @@ export default function VisualDemo(props) {
 
       <div>
 
-        <Paper
+      <Tooltip
+        title="Start"
+        aria-label="Start"
+        placement="right"
+      >
+        <IconButton
           id='smallBox'
           onClick={() => runCounter()}
-        >Start</Paper>
+        >
+          <EqualizerIcon/>
+        </IconButton>
+      </Tooltip>
 
         <div className={classes.flexContainer}>
           {props.frequencyBandArray.map((num) =>

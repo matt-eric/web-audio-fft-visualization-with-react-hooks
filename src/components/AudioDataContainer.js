@@ -10,22 +10,28 @@ class AudioDataContainer extends React.Component {
       audioData: {}
     }
     this.frequencyBandArray = [...Array(25).keys()].reverse()
+    this.audioFile = new Audio();
+    this.audioContext = new AudioContext();
+    this.source = this.audioContext.createMediaElementSource(this.audioFile);
+    this.analyser = this.audioContext.createAnalyser();
   }
 
   initializeAudioAnalyser() {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    const audioFile = new Audio();
-    const audioContext = new AudioContext();
-    const source = audioContext.createMediaElementSource(audioFile);
-    const analyser = audioContext.createAnalyser();
-    audioFile.src = soundFile;
-    analyser.fftSize = 64
-    source.connect(audioContext.destination);
-    source.connect(analyser);
-    audioFile.play();
+    this.audioFile.src = soundFile;
+    this.analyser.fftSize = 64
+    this.source.connect(this.audioContext.destination);
+    this.source.connect(this.analyser);
+    this.audioFile.play();
       this.setState({
-        audioData: analyser
+        audioData: this.analyser
       })
+  }
+
+  getFrequencyData = (num, callback) => {
+    const bufferLength = this.state.audioData.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+    this.state.audioData.getByteFrequencyData(dataArray)
+    callback(dataArray)
   }
 
   componentDidMount(){
@@ -39,6 +45,7 @@ class AudioDataContainer extends React.Component {
         <VisualDemo
           audioData={this.state.audioData}
           frequencyBandArray={this.frequencyBandArray}
+          getFrequencyData={this.getFrequencyData}
         />
       </div>
     );
