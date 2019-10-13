@@ -6,14 +6,14 @@ class AudioDataContainer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      audioData: {}
-    }
-    this.frequencyBandArray = [...Array(25).keys()].reverse()
-    this.audioFile = new Audio();
-    this.audioContext = new AudioContext();
-    this.source = this.audioContext.createMediaElementSource(this.audioFile);
-    this.analyser = this.audioContext.createAnalyser();
+      this.state = {
+        audioData: {}
+      }
+      this.frequencyBandArray = [...Array(25).keys()].reverse()
+      this.audioFile = new Audio();
+      this.audioContext = new AudioContext();
+      this.source = this.audioContext.createMediaElementSource(this.audioFile);
+      this.analyser = this.audioContext.createAnalyser();
   }
 
   initializeAudioAnalyser() {
@@ -43,7 +43,6 @@ class AudioDataContainer extends React.Component {
     return (
       <div>
         <VisualDemo
-          audioData={this.state.audioData}
           frequencyBandArray={this.frequencyBandArray}
           getFrequencyData={this.getFrequencyData}
         />

@@ -27,33 +27,35 @@ export default function VisualDemo(props) {
     function runCounter (){
       setInterval(() =>
         props.getFrequencyData(0, handleFrequencyChanges)
-      , 10);
+      , 15);
     }
 
     return (
 
       <div>
 
-      <Tooltip
-        title="Start"
-        aria-label="Start"
-        placement="right"
-      >
-        <IconButton
-          id='smallBox'
-          onClick={() => runCounter()}
-        >
-          <EqualizerIcon/>
-        </IconButton>
-      </Tooltip>
+        <div>
+          <Tooltip
+            title="Start"
+            aria-label="Start"
+            placement="right"
+          >
+            <IconButton
+              id='startButton'
+              onClick={() => runCounter()}
+            >
+              <EqualizerIcon/>
+            </IconButton>
+          </Tooltip>
+        </div>
 
         <div className={classes.flexContainer}>
           {props.frequencyBandArray.map((num) =>
             <Paper
-              id={'largeBox'}
+              id={'frequencyBands'}
               style={{
                 height: Math.pow(value[num], 1.025),
-                backgroundColor: `rgb(0, ${value[num]}, 206)`
+                backgroundColor: `rgb(0, 255, ${value[num]})`,
               }}
               elevation={4}
               key={num}
