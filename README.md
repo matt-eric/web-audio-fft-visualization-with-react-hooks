@@ -1,6 +1,6 @@
-A method for visualizing live spectral data in React.js.
+A method for visualizing live spectral data of an audio source in React.js.
 
-This project utilizes the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to generate an [AnalyserNode](https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode).
+This project utilizes the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to create an [AnalyserNode](https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode) for generating real-time frequency analysis information of the audio source in the web browser.
 
 The Live Demo plays an audio file on load of the page. When the Start button is pressed, a loop is invoked which will, at the interval specified in the function, retrieve an array of current [amplitude values](https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteFrequencyData) respective to the specified [Bin Count](https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/frequencyBinCount), and pass the array into the React.useState hook. The state is passed to the FrequencyBands.js child component, which creates an array of [Material-UI Paper Components](https://material-ui.com/api/paper/) with height properties equivalent to the current amplitude values of the respective frequency bands. The amplitude values are also used to create RGB values for the backgroundColor of the frequency bands.
 
