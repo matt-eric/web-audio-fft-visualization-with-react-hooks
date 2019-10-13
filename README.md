@@ -18,7 +18,6 @@ This project is intended to have more examples in the future.
 
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
