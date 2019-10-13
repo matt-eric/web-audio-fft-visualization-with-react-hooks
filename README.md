@@ -1,6 +1,6 @@
 A method for visualizing live spectral data of an audio source in React.js.
 
-![](fft-react-1.gif)
+![](fft-react-2.gif)
 
 This project utilizes the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to create an [AnalyserNode](https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode) for generating real-time frequency analysis information of the audio source in the web browser.
 
@@ -8,7 +8,7 @@ The Live Demo plays an audio file on load of the page. When the Start button is 
 
 The aim of this project is to visualize each frequency band of an audio data source in real time, using react components that can be independently styled and displayed according to the current amplitude and frequency values.
 
-![](fft-react-2.gif)
+![](fft-react-1.gif)
 
 Using this data in React hooks provides significant potential for how the data can be visualized in a React application. There are alternate approaches to visualizing real time frequency data of an audio source in the web browser using third party libraries for the Web Audio API that produce the data in a single canvas. While these libraries can be used as React components, there typically is not an easy option for passing the data to other components to be re-used outside of the canvas component.
 
