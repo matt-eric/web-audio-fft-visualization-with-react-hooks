@@ -1,5 +1,5 @@
 {
-  "name": "web-audio-fft-visualization-with-react-hooks",
+  "name": "web-audio-fft-visualization-react-hooks",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://strengthmate.github.io/web-audio-fft-visualization-with-react-hooks/",
@@ -14,11 +14,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

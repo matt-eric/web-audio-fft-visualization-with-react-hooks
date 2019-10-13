@@ -31,6 +31,11 @@ export default function VisualDemo(props) {
       , 15);
     }
 
+    function handleStartBottonClick(){
+      props.initializeAudioAnalyser()
+      runCounter()
+    }
+
     return (
 
       <div>
@@ -43,7 +48,8 @@ export default function VisualDemo(props) {
           >
             <IconButton
               id='startButton'
-              onClick={() => runCounter()}
+              onClick={() => handleStartBottonClick()}
+              disabled={!!props.audioData ? true : false}
             >
               <EqualizerIcon/>
             </IconButton>
