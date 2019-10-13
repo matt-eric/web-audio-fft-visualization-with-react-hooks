@@ -8,7 +8,8 @@ class AudioDataContainer extends React.Component {
     super(props);
     this.state = {
       audioData: {}
-    };
+    }
+    this.frequencyBandArray = [...Array(25).keys()].reverse()
   }
 
   initializeAudioAnalyser() {
@@ -37,6 +38,7 @@ class AudioDataContainer extends React.Component {
       <div>
         <VisualDemo
           audioData={this.state.audioData}
+          frequencyBandArray={this.frequencyBandArray}
         />
       </div>
     );

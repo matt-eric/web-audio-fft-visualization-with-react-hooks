@@ -45,7 +45,7 @@ export default function VisualDemo(props) {
         >Start</Paper>
 
         <div className={classes.flexContainer}>
-          {[...Array(25).keys()].reverse().map((num) =>
+          {props.frequencyBandArray.map((num) =>
             <Paper
               id={'largeBox'}
               style={{
