@@ -61,7 +61,7 @@ export default function VisualDemo(props) {
             <Paper
               id={'frequencyBands'}
               style={{
-                height: Math.pow(value[num], 1.025),
+                height: Math.pow(value[num], 1.005),
                 backgroundColor: `rgb(0, 255, ${value[num]})`,
               }}
               elevation={4}
