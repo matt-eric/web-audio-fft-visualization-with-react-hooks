@@ -27,7 +27,7 @@ class AudioDataContainer extends React.Component {
       })
   }
 
-  getFrequencyData = (num, callback) => {
+  getFrequencyData = (callback) => {
     const bufferLength = this.state.audioData.frequencyBinCount;
     const dataArray = new Uint8Array(bufferLength);
     this.state.audioData.getByteFrequencyData(dataArray)

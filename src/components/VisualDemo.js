@@ -25,15 +25,14 @@ export default function VisualDemo(props) {
       setValue(newValue);
     };
 
-    function runCounter (){
-      setInterval(() =>
-        props.getFrequencyData(0, handleFrequencyChanges)
-      , 15);
+    function runSpectrum(){
+      props.getFrequencyData(handleFrequencyChanges)
+      requestAnimationFrame(runSpectrum)
     }
 
     function handleStartBottonClick(){
       props.initializeAudioAnalyser()
-      runCounter()
+      requestAnimationFrame(runSpectrum)
     }
 
     return (
