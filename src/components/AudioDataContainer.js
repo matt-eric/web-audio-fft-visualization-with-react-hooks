@@ -6,9 +6,7 @@ class AudioDataContainer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-
-    }
+    this.state = {}
     this.frequencyBandArray = [...Array(25).keys()]
   }
 
@@ -27,11 +25,11 @@ class AudioDataContainer extends React.Component {
       })
   }
 
-  getFrequencyData = (callback) => {
+  getFrequencyData = (stateHook) => {
     const bufferLength = this.state.audioData.frequencyBinCount;
     const dataArray = new Uint8Array(bufferLength);
     this.state.audioData.getByteFrequencyData(dataArray)
-    callback(dataArray)
+    stateHook(dataArray)
   }
 
   render(){
