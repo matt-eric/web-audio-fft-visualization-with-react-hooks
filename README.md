@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks.svg?branch=master)](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks)
+
 A method for visualizing live spectral data of an audio source in React.js.
 
 Try the [Live Demo](https://strengthmate.github.io/web-audio-fft-visualization-with-react-hooks/).
