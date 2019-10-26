@@ -2,6 +2,8 @@ A method for visualizing live spectral data of an audio source in React.js.
 
 Try the [Live Demo](https://strengthmate.github.io/web-audio-fft-visualization-with-react-hooks/).
 
+View a more detailed description on [Medium](https://medium.com/@accomplish3d/using-react-ui-components-to-visualize-real-time-spectral-data-of-an-audio-source-17a498a6d8d7)
+
 ![](fft-react-2.gif)
 
 This project utilizes the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to create an [AnalyserNode](https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode) for generating real-time frequency analysis information of the audio source in the web browser.
