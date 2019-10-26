@@ -40,33 +40,36 @@ export default function VisualDemo(props) {
       <div>
 
         <div>
+
           <Tooltip
             title="Start"
             aria-label="Start"
-            placement="right"
-          >
+            placement="right">
+
             <IconButton
               id='startButton'
               onClick={() => handleStartBottonClick()}
-              disabled={!!props.audioData ? true : false}
-            >
+              disabled={!!props.audioData ? true : false}>
+
               <EqualizerIcon/>
+
             </IconButton>
+
           </Tooltip>
+
         </div>
 
         <div className={classes.flexContainer}>
+
           {props.frequencyBandArray.map((num) =>
             <Paper
               id={'frequencyBands'}
               style={{
                 height: value[num],
-                backgroundColor: `rgb(0, 255, ${value[num]})`,
-              }}
+                backgroundColor: `rgb(0, 255, ${value[num]})`}}
               elevation={4}
-              key={num}>
-            </Paper>
-          )}
+              key={num}/>)}
+
         </div>
 
       </div>
