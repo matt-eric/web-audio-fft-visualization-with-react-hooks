@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks.svg?branch=master)](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks)
+[![Build Status](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks.svg?branch=master)](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks)[![Coverage Status](https://coveralls.io/repos/github/strengthmate/web-audio-fft-visualization-with-react-hooks/badge.svg?branch=master)](https://coveralls.io/github/strengthmate/web-audio-fft-visualization-with-react-hooks?branch=master)
 
 A method for visualizing live spectral data of an audio source in React.js.
 
