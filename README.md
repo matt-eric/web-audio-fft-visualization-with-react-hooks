@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks.svg?branch=master)](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks)
+[![Build Status](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks.svg?branch=master)](https://travis-ci.org/strengthmate/web-audio-fft-visualization-with-react-hooks) ![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A method for visualizing live spectral data of an audio source in React.js.
 
