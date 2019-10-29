@@ -1,4 +1,4 @@
-import React, { useEffect, useRef }  from 'react';
+import React, { useRef }  from 'react';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
