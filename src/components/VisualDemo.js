@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef }  from 'react';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -19,14 +19,20 @@ export default function VisualDemo(props) {
 
     const classes = useStyles();
 
-    const [value, setValue] = React.useState(0);
+    const amplitudeValues = useRef(null);
 
-    const handleFrequencyChanges = (newValue) => {
-      setValue(newValue);
+    function adjustFreqBandStyle(newAmplitudeData){
+      amplitudeValues.current = newAmplitudeData;
+      let domElements = props.frequencyBandArray.map((num) =>
+        document.getElementById(num))
+      props.frequencyBandArray.forEach((num) => {
+        domElements[num].style.backgroundColor = `rgb(0, 255, ${amplitudeValues.current[num]})`
+        domElements[num].style.height = `${amplitudeValues.current[num]}px`
+      })
     };
 
     function runSpectrum(){
-      props.getFrequencyData(handleFrequencyChanges)
+      props.getFrequencyData(adjustFreqBandStyle)
       requestAnimationFrame(runSpectrum)
     }
 
@@ -40,36 +46,28 @@ export default function VisualDemo(props) {
       <div>
 
         <div>
-
           <Tooltip
             title="Start"
             aria-label="Start"
             placement="right">
-
             <IconButton
               id='startButton'
               onClick={() => handleStartBottonClick()}
               disabled={!!props.audioData ? true : false}>
-
               <EqualizerIcon/>
-
             </IconButton>
-
           </Tooltip>
-
         </div>
 
         <div className={classes.flexContainer}>
-
           {props.frequencyBandArray.map((num) =>
             <Paper
-              id={'frequencyBands'}
-              style={{
-                height: value[num],
-                backgroundColor: `rgb(0, 255, ${value[num]})`}}
+              className={'frequencyBands'}
               elevation={4}
-              key={num}/>)}
-
+              id={num}
+              key={num}
+            />
+          )}
         </div>
 
       </div>
