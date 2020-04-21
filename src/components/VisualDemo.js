@@ -25,10 +25,11 @@ export default function VisualDemo(props) {
       amplitudeValues.current = newAmplitudeData;
       let domElements = props.frequencyBandArray.map((num) =>
         document.getElementById(num))
-      props.frequencyBandArray.forEach((num) => {
+      for(let i=0; i<props.frequencyBandArray.length; i++){
+        let num = props.frequencyBandArray[i]
         domElements[num].style.backgroundColor = `rgb(0, 255, ${amplitudeValues.current[num]})`
         domElements[num].style.height = `${amplitudeValues.current[num]}px`
-      })
+      }
     };
 
     function runSpectrum(){
