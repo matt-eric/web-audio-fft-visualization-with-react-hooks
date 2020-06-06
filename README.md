@@ -2,7 +2,7 @@
 
 A method for visualizing live spectral data of an audio source in React.js.
 
-Try the [Live Demo](https://strengthmate.github.io/web-audio-fft-visualization-with-react-hooks/).
+Try the [Live Demo](https://matt-eric.github.io/web-audio-fft-visualization-with-react-hooks/).
 
 View a more detailed description on [Medium](https://medium.com/@accomplish3d/using-react-ui-components-to-visualize-real-time-spectral-data-of-an-audio-source-17a498a6d8d7)
 
