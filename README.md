@@ -16,13 +16,6 @@ The aim of this project is to visualize each frequency band of an audio data sou
 
 ![](fft-react-1.gif)
 
-There are alternate approaches to visualizing real-time frequency data of an audio source by producing the data in a single canvas. Such methods can impose limitations for passing the data to other React.js components for re-use outside of the single canvas component.
-
-Using this data with React.js hooks provides significant potential for how the data can be visualized in React.js. The current demonstration provides just one visual representation of the frequency data of an audio source. This project is intended to have more examples in the future.
-
-
-
-
 ## Available Scripts
 
 To demo the project locally, run:
