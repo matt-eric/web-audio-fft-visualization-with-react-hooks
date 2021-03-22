@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/web-audio-fft-visualization-with-react-hooks/static/css/main.bb564a3b.chunk.css",
+    "main.js": "/web-audio-fft-visualization-with-react-hooks/static/js/main.d5b68536.chunk.js",
+    "main.js.map": "/web-audio-fft-visualization-with-react-hooks/static/js/main.d5b68536.chunk.js.map",
+    "runtime-main.js": "/web-audio-fft-visualization-with-react-hooks/static/js/runtime-main.965003fb.js",
+    "runtime-main.js.map": "/web-audio-fft-visualization-with-react-hooks/static/js/runtime-main.965003fb.js.map",
+    "static/js/2.74007eb6.chunk.js": "/web-audio-fft-visualization-with-react-hooks/static/js/2.74007eb6.chunk.js",
+    "static/js/2.74007eb6.chunk.js.map": "/web-audio-fft-visualization-with-react-hooks/static/js/2.74007eb6.chunk.js.map",
+    "index.html": "/web-audio-fft-visualization-with-react-hooks/index.html",
+    "precache-manifest.81f5e620add4096765d2810c5d0e521c.js": "/web-audio-fft-visualization-with-react-hooks/precache-manifest.81f5e620add4096765d2810c5d0e521c.js",
+    "service-worker.js": "/web-audio-fft-visualization-with-react-hooks/service-worker.js",
+    "static/css/main.bb564a3b.chunk.css.map": "/web-audio-fft-visualization-with-react-hooks/static/css/main.bb564a3b.chunk.css.map",
+    "static/media/GummyBearz.mp3": "/web-audio-fft-visualization-with-react-hooks/static/media/GummyBearz.977769bf.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.965003fb.js",
+    "static/js/2.74007eb6.chunk.js",
+    "static/css/main.bb564a3b.chunk.css",
+    "static/js/main.d5b68536.chunk.js"
+  ]
+}
